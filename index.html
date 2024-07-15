@@ -6,51 +6,79 @@
     <title>KnowYourSchool</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Stili aggiuntivi per migliorare il design */
+        body {
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+        .jumbotron {
+            background-color: #ffffff;
+            padding: 2rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">KnowYourSchool</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="scuole.html">Scuole</a>
-                </li>
-    
-                <li class="nav-item">
-                    <a class="nav-link" href="recensioni.html">Lascia una recensione</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KnowYourSchool</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scuole.html">Scuole</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recensioni.html">Lascia una recensione</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-5">
-        <div class="jumbotron">
-            <h1 class="display-4">Benvenuto su KnowYourSchool!</h1>
-            <p class="lead">Trova la scuola superiore perfetta a Catania attraverso le recensioni e valutazioni degli utenti.</p>
-            <hr class="my-4">
-            <p>Esplora le scuole e leggi le recensioni per fare una scelta informata.</p>
-            <a class="btn btn-primary btn-lg" href="recensioni.html" role="button">Lascia una recensione</a>
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <div class="jumbotron">
+                    <h1 class="display-4">Benvenuto su KnowYourSchool!</h1>
+                    <p class="lead">Trova la scuola superiore perfetta a Catania attraverso le recensioni e valutazioni degli utenti.</p>
+                    <hr class="my-4">
+                    <p>Esplora le scuole e leggi le recensioni per fare una scelta informata.</p>
+                    <a class="btn btn-primary btn-lg" href="recensioni.html" role="button">Lascia una recensione</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start mt-5">
+    <footer class="text-center text-lg-start">
         <div class="container p-4">
-            <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
+            <p>&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
 </body>
 </html>

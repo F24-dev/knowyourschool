@@ -6,289 +6,287 @@
     <title>Scuole - KnowYourSchool</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Stili aggiuntivi per migliorare il design */
+        body {
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+        .jumbotron {
+            background-color: #ffffff;
+            padding: 2rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .school-list h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .school-list .school-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .school-list .school-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .school-list .school-item .card-body {
+            padding: 1.25rem;
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">KnowYourSchool</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="scuole.html">Scuole</a>
-                </li>
-    
-                <li class="nav-item">
-                    <a class="nav-link" href="recensioni.html">Lascia una recensione</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KnowYourSchool</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scuole.html">Scuole</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recensioni.html">Lascia una recensione</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-5">
+    <section class="container my-5 school-list">
         <h1 class="mb-4">Le Scuole</h1>
         <div class="row">
             <!-- School 1 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="principeumberto.html" class="card-link">
-                    <div class="card">
-                        <img src="images/principeumberto.jpg" class="card-img-top" alt="Scuola 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Liceo Scientifico Statale "Principe Umberto Di Savoia"</h5>
-                        </div>
+                    <img src="images/principeumberto.jpg" alt="Scuola 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Liceo Scientifico Statale "Principe Umberto Di Savoia"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 2 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="galileo.html" class="card-link">
-                    <div class="card">
-                        <img src="images/galileogalilei.jpg" class="card-img-top" alt="Scuola 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Liceo Scientifico Statale "Galileo Galilei"</h5>
-                        </div>
+                    <img src="images/galileogalilei.jpg" alt="Scuola 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Liceo Scientifico Statale "Galileo Galilei"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 3 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="boggio.html" class="card-link">
-                    <div class="card">
-                        <img src="images/boggiolera.jpg" class="card-img-top" alt="Scuola 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Liceo Scientifico Statale "Enrico Boggio Lera"</h5>
-                        </div>
+                    <img src="images/boggiolera.jpg" alt="Scuola 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Liceo Scientifico Statale "Enrico Boggio Lera"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 4 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="vaccarini.html" class="card-link">
-                    <div class="card">
-                        <img src="images/vaccarini.jpg" class="card-img-top" alt="Scuola 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Istituto Istruzione Superiore Statale "G.B. Vaccarini"</h5>
-                        </div>
+                    <img src="images/vaccarini.jpg" alt="Scuola 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Istituto Istruzione Superiore Statale "G.B. Vaccarini"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 5 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="turrisi.html" class="card-link">
-                    <div class="card">
-                        <img src="images/turrisicolonna.jpeg" class="card-img-top" alt="Scuola 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Liceo Statale "Giuseppina Turrisi Colonna"</h5>
-                        </div>
+                    <img src="images/turrisicolonna.jpeg" alt="Scuola 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Liceo Statale "Giuseppina Turrisi Colonna"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 6 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="lombardo.html" class="card-link">
-                    <div class="card">
-                        <img src="images/lombardoradice.jpg" class="card-img-top" alt="Scuola 6">
-                        <div class="card-body">
-                            <h5 class="card-title">Liceo Statale "G. Lombardo Radice"</h5>
-                        </div>
+                    <img src="images/lombardoradice.jpg" alt="Scuola 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Liceo Statale "G. Lombardo Radice"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 7 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="speda.html" class="card-link">
-                    <div class="card">
-                        <img src="images/spedalieri.jpg" class="card-img-top" alt="Scuola 7">
-                        <div class="card-body">
-                            <h5 class="card-title">Liceo Classico Statale “Nicola Spedalieri”</h5>
-                        </div>
+                    <img src="images/spedalieri.jpg" alt="Scuola 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Liceo Classico Statale “Nicola Spedalieri”</h5>
                     </div>
                 </a>
             </div>
             <!-- School 8 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="mcutelli.html" class="card-link">
-                    <div class="card">
-                        <img src="images/mariocutelli.jpg" class="card-img-top" alt="Scuola 8">
-                        <div class="card-body">
-                            <h5 class="card-title">Liceo Ginnasio Statale Mario Cutelli</h5>
-                        </div>
+                    <img src="images/mariocutelli.jpg" alt="Scuola 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Liceo Ginnasio Statale Mario Cutelli</h5>
                     </div>
                 </a>
             </div>
             <!-- School 9 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="cutelli.html" class="card-link">
-                    <div class="card">
-                        <img src="images/convittocutelli.jpeg" class="card-img-top" alt="Scuola 9">
-                        <div class="card-body">
-                            <h5 class="card-title">Convitto Nazionale Mario Cutelli</h5>
-                        </div>
+                    <img src="images/convittocutelli.jpeg" alt="Scuola 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Convitto Nazionale Mario Cutelli</h5>
                     </div>
                 </a>
             </div>
             <!-- School 10 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="lazzaro.html" class="card-link">
-                    <div class="card">
-                        <img src="images/lazzaro.jpg" class="card-img-top" alt="Scuola 10">
-                        <div class="card-body">
-                            <h5 class="card-title">Liceo artistico statale M.M. Lazzaro</h5>
-                        </div>
+                    <img src="images/lazzaro.jpg" alt="Scuola 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Liceo artistico statale M.M. Lazzaro</h5>
                     </div>
                 </a>
             </div>
             <!-- School 11 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="emilio.html" class="card-link">
-                    <div class="card">
-                        <img src="images/emiliogreco.jpg" class="card-img-top" alt="Scuola 11">
-                        <div class="card-body">
-                            <h5 class="card-title">Liceo Artistico Statale "Emilio Greco"</h5>
-                        </div>
+                    <img src="images/emiliogreco.jpg" alt="Scuola 11">
+                    <div class="card-body">
+                        <h5 class="card-title">Liceo Artistico Statale "Emilio Greco"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 12 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="salesiani.html" class="card-link">
-                    <div class="card">
-                        <img src="images/salesiani.jpg" class="card-img-top" alt="Scuola 12">
-                        <div class="card-body">
-                            <h5 class="card-title">Istituto Salesiano "San Francesco di Sales"</h5>
-                        </div>
+                    <img src="images/salesiani.jpg" alt="Scuola 12">
+                    <div class="card-body">
+                        <h5 class="card-title">Istituto Salesiano "San Francesco di Sales"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 13 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="polivalente.html" class="card-link">
-                    <div class="card">
-                        <img src="images/polivalente.png" class="card-img-top" alt="Scuola 13">
-                        <div class="card-body">
-                            <h5 class="card-title">Istituto Polivalente "Valdisavoia"</h5>
-                        </div>
+                    <img src="images/polivalente.png" alt="Scuola 13">
+                    <div class="card-body">
+                        <h5 class="card-title">Istituto Polivalente "Valdisavoia"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 14 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="archimede.html" class="card-link">
-                    <div class="card">
-                        <img src="images/archimede.jpg" class="card-img-top" alt="Scuola 14">
-                        <div class="card-body">
-                            <h5 class="card-title">Istituto Tecnico Industriale Statale "Archimede"</h5>
-                        </div>
+                    <img src="images/archimede.jpg" alt="Scuola 14">
+                    <div class="card-body">
+                        <h5 class="card-title">Istituto Tecnico Industriale Statale "Archimede"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 15 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="marconi.html" class="card-link">
-                    <div class="card">
-                        <img src="images/marconi.jpg" class="card-img-top" alt="Scuola 15">
-                        <div class="card-body">
-                            <h5 class="card-title">Istituto Tecnico Industriale Statale "G. Marconi"</h5>
-                        </div>
+                    <img src="images/marconi.jpg" alt="Scuola 15">
+                    <div class="card-body">
+                        <h5 class="card-title">Istituto Tecnico Industriale Statale "G. Marconi"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 16 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="duca.html" class="card-link">
-                    <div class="card">
-                        <img src="images/ducadegliabruzzi.jpg" class="card-img-top" alt="Scuola 16">
-                        <div class="card-body">
-                            <h5 class="card-title">I.S.I.S. "Duca Degli Abruzzi"</h5>
-                        </div>
+                    <img src="images/ducadegliabruzzi.jpg" alt="Scuola 16">
+                    <div class="card-body">
+                        <h5 class="card-title">I.S.I.S. "Duca Degli Abruzzi"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 17 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="ferrarin.html" class="card-link">
-                    <div class="card">
-                        <img src="images/ferrarin.jpg" class="card-img-top" alt="Scuola 17">
-                        <div class="card-body">
-                            <h5 class="card-title">Istituto Tecnico Aeronautico Statale "Arturo Ferrarin"</h5>
-                        </div>
+                    <img src="images/ferrarin.jpg" alt="Scuola 17">
+                    <div class="card-body">
+                        <h5 class="card-title">Istituto Tecnico Aeronautico Statale "Arturo Ferrarin"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 18 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="fermi.html" class="card-link">
-                    <div class="card">
-                        <img src="images/enricofermi.jpg" class="card-img-top" alt="Scuola 18">
-                        <div class="card-body">
-                            <h5 class="card-title">Istituto di Istruzione Superiore "E. Fermi - F. Eredia"</h5>
-                        </div>
+                    <img src="images/enricofermi.jpg" alt="Scuola 18">
+                    <div class="card-body">
+                        <h5 class="card-title">Istituto di Istruzione Superiore "E. Fermi - F. Eredia"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 19 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="eris.html" class="card-link">
-                    <div class="card">
-                        <img src="images/eris.jpg" class="card-img-top" alt="Scuola 19">
-                        <div class="card-body">
-                            <h5 class="card-title">Associazione "Eris"</h5>
-                        </div>
+                    <img src="images/eris.jpg" alt="Scuola 19">
+                    <div class="card-body">
+                        <h5 class="card-title">Associazione "Eris"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 20 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="karol.html" class="card-link">
-                    <div class="card">
-                        <img src="images/karol.jpg" class="card-img-top" alt="Scuola 20">
-                        <div class="card-body">
-                            <h5 class="card-title">I.P.S.S.E.O.A. "Karol Wojtyla"</h5>
-                        </div>
+                    <img src="images/karol.jpg" alt="Scuola 20">
+                    <div class="card-body">
+                        <h5 class="card-title">I.P.S.S.E.O.A. "Karol Wojtyla"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 21 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="gemellaro.html" class="card-link">
-                    <div class="card">
-                        <img src="images/gemellaro.jpg" class="card-img-top" alt="Scuola 21">
-                        <div class="card-body">
-                            <h5 class="card-title">Istituto di Istruzione Superiore Statale "Carlo Gemmellaro"</h5>
-                        </div>
+                    <img src="images/gemellaro.jpg" alt="Scuola 21">
+                    <div class="card-body">
+                        <h5 class="card-title">Istituto di Istruzione Superiore Statale "Carlo Gemmellaro"</h5>
                     </div>
                 </a>
             </div>
             <!-- School 22 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 school-item">
                 <a href="defelice.html" class="card-link">
-                    <div class="card">
-                        <img src="images/defelice.jpg" class="card-img-top" alt="Scuola 22">
-                        <div class="card-body">
-                            <h5 class="card-title">I.I.S. "G. De Felice Giuffrida Olivetti"</h5>
-                        </div>
+                    <img src="images/defelice.jpg" alt="Scuola 22">
+                    <div class="card-body">
+                        <h5 class="card-title">I.I.S. "G. De Felice Giuffrida Olivetti"</h5>
                     </div>
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start mt-5">
+    <footer class="text-center text-lg-start bg-dark text-muted">
         <div class="container p-4">
-            <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
+            <p>&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
 </body>
 </html>

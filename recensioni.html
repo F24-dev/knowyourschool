@@ -7,57 +7,87 @@
     <title>Come lasciare una recensione - KnowYourSchool</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        body {
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
         .how-to-review {
             margin-top: 50px;
             padding: 20px;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+            border-radius: 0.5rem;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 1rem 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">KnowYourSchool</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="scuole.html">Scuole</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Come lasciare una recensione <span class="sr-only">(current)</span></a>
-                </li>
-              
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KnowYourSchool</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scuole.html">Scuole</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Come lasciare una recensione <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Main Content -->
     <div class="container mt-5">
         <div class="how-to-review">
-            <h1>Come lasciare una recensione</h1>
-            <p>Per lasciare una recensione, contatta il nostro profilo Instagram ufficiale <a href="https://www.instagram.com/knowyourschool_official/" target="_blank">@knowyourschool_official</a>. Inviaci un messaggio diretto con la tua recensione, indicando il nome della scuola, la tua valutazione in stelle (da 1 a 5), e il tuo commento. Sarà nostra premura pubblicarla sul nostro sito.</p>
-            <br>
-            <p>Per eventuali problemi contattaci alla mail <a href="mailto:knowyourschoolmail@gmail.com">knowyourschoolmail@gmail.com</a></p>
+            <h1 class="display-4 text-center mb-4">Come lasciare una recensione</h1>
+            <p class="lead text-center">Per lasciare una recensione, contatta il nostro profilo Instagram ufficiale <a
+                    href="https://www.instagram.com/knowyourschool_official/" target="_blank">@knowyourschool_official</a>.
+                Inviaci un messaggio diretto con la tua recensione, indicando il nome della scuola, la tua valutazione in
+                stelle (da 1 a 5), e il tuo commento. Sarà nostra premura pubblicarla sul nostro sito.</p>
+            <p class="lead text-center mt-4">Per eventuali problemi contattaci alla mail <a
+                    href="mailto:knowyourschoolmail@gmail.com">knowyourschoolmail@gmail.com</a></p>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start mt-5">
+    <footer class="text-center text-lg-start">
         <div class="container p-4">
-            <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
+            <p>&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
