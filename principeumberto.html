@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liceo Scientifico Statale "Principe Umberto Di Savoia" - KnowYourSchool</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .school-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .school-description {
+            margin-bottom: 30px;
+        }
+
+        .school-info {
+            margin-bottom: 30px;
+        }
+
+        .school-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .school-info table td, 
+        .school-info table th {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .school-reviews {
+            margin-bottom: 30px;
+        }
+
+        .review-stars {
+            color: gold;
+        }
+
+        .btn-write-review {
+            margin-top: 20px;
+        }
+        .review {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">KnowYourSchool</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="scuole.html">Scuole</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="recensioni.html">Lascia una recensione</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="school-header">
+            <h1>Liceo Scientifico Statale "Principe Umberto Di Savoia"</h1>
+            <img src="images/principeumberto.jpg" class="img-fluid rounded mx-auto d-block" alt="Scuola 1">
+        </div>
+
+        <div class="school-description">
+            <p>La nostra Scuola: identità, insegnamenti e storia. Il "Principe Umberto di Savoia" è storicamente il più antico Liceo Scientifico, ora anche Linguistico, della provincia di Catania e della Sicilia Orientale, istituito con il R.D. n. 1915 del 9 settembre 1923 ed intitolato all'allora principe ereditario Umberto II di Savoia. La prima sede del Liceo si trovava in via Vittorio Emanuele. Dagli anni '70 dello scorso secolo la scuola è stata trasferita nell'attuale sede nel quartiere di Cibali, quartiere che mantiene la propria identità con iniziative ed eventi che concorrono alla conservazione del patrimonio e delle tradizioni culturali. Il territorio si caratterizza per la densità della popolazione, la vivacità e l'intensità della vita culturale, la presenza di attività economiche tradizionali che affiancano piccole attività imprenditoriali nel settore terziario. L'istituto è dotato di una sede centrale, di due plessi prefabbricati con ampie aule climatizzate, adiacenti alla sede centrale, di due succursali site in via Susanna 69 e in via Monreale 17. Il contesto socio-economico di provenienza degli studenti è nella media. Il background delle famiglie di provenienza è omogeneo ed esprime bisogni socio-culturali concreti, fortemente radicati nel territorio, con ricadute positive sulla composizione delle classi e sull'efficacia dell'azione didattica. A seguito dei processi attivati in un'ottica di miglioramento continuo , il Liceo ha più volte conseguito ottimi risultati nella classifica nazionale EDUSCOPIO.</p>
+        </div>
+
+        <div class="school-info">
+            <h3>Informazioni Generali</h3>
+            <table>
+                <tr>
+                    <th>Indirizzi Offerti</th>
+                    <td>Liceo Scientifico, Liceo Matematico, Liceo Linguistico, Liceo Lingusitico ESABAC, Liceo Linguistico Internazionale Cambridge</td>
+                </tr>
+                <tr>
+                    <th>Numero Alunni</th>
+                    <td>1637</td>
+                </tr>
+                <tr>
+                    <th>Numero Classi</th>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <th>Indirizzo</th>
+                    <td>Largo Filippo Raciti, 80, 95123 Catania CT</td>
+                </tr>
+                <tr>
+                    <th>Classificazione</th>
+                    <td>Statale</td>
+                </tr>
+                <tr>
+                    <th>Sito Web</th>
+                    <td><a href="https://www.principeumberto.edu.it/">https://www.principeumberto.edu.it/</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="school-reviews">
+            <h3>Recensioni</h3>
+            <br>
+            <p>Ancora nessuna recensione</p>
+
+            <!-- <div class="review">
+                <h4>Nome Utente</h4>
+                <div class="review-stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p>bla bla bla</p>
+                <p class="review-date">10 Luglio 2024</p>
+            </div>
+        </div> -->
+
+        <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
+    </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
