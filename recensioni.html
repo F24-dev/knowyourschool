@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Come lasciare una recensione - KnowYourSchool</title>
+    <title>Lascia una recensione - KnowYourSchool</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             background-color: #f8f9fa;
             color: #495057;
             position: relative;
-            padding-bottom: 100px; /* Altezza del footer */
+            padding-bottom: 100px;
         }
-
         .navbar {
             background-color: #343a40;
         }
-
         .navbar-brand,
         .navbar-nav .nav-link {
             color: #ffffff;
         }
-
-        .how-to-review {
+        .review-form {
             margin-top: 50px;
             padding: 20px;
             border: 1px solid #ddd;
@@ -31,7 +27,6 @@
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         footer {
             background-color: #343a40;
             color: #ffffff;
@@ -42,7 +37,6 @@
         }
     </style>
 </head>
-
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -61,8 +55,7 @@
                         <a class="nav-link" href="scuole.html">Scuole</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Come lasciare una recensione <span
-                                class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Lascia una recensione <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -71,14 +64,42 @@
 
     <!-- Main Content -->
     <div class="container mt-5">
-        <div class="how-to-review">
-            <h1 class="display-4 text-center mb-4">Come lasciare una recensione</h1>
-            <p class="lead text-center">Per lasciare una recensione, contatta il nostro profilo Instagram ufficiale <a
-                    href="https://www.instagram.com/knowyourschool_official/" target="_blank">@knowyourschool_official</a>.
-                Inviaci un messaggio diretto con la tua recensione, indicando il nome della scuola, la tua valutazione in
-                stelle (da 1 a 5), e il tuo commento. Sarà nostra premura pubblicarla sul nostro sito.</p>
-            <p class="lead text-center mt-4">Per eventuali problemi contattaci alla mail <a
-                    href="mailto:knowyourschoolmail@gmail.com">knowyourschoolmail@gmail.com</a></p>
+        <div class="review-form">
+            <h1 class="display-4 text-center mb-4">Lascia una recensione</h1>
+            <form id="review-form" action="https://formspree.io/f/xanwkvzq" method="POST">
+                <!-- Campo Nome (Opzionale) -->
+                <div class="form-group">
+                    <label for="userName">Il tuo nome (opzionale)</label>
+                    <input type="text" class="form-control" id="userName" name="user_name" placeholder="Inserisci il tuo nome">
+                </div>
+                
+                <!-- Nome della scuola -->
+                <div class="form-group">
+                    <label for="schoolName">Nome della scuola</label>
+                    <input type="text" class="form-control" id="schoolName" name="school_name" required>
+                </div>
+                
+                <!-- Valutazione -->
+                <div class="form-group">
+                    <label for="rating">Valutazione (da 1 a 5)</label>
+                    <select class="form-control" id="rating" name="rating" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                
+                <!-- Recensione -->
+                <div class="form-group">
+                    <label for="review">Recensione</label>
+                    <textarea class="form-control" id="review" name="review" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Invia recensione</button>
+            </form>
+            <div id="form-message" class="mt-4"></div> <!-- Questo div mostrerà il messaggio -->
         </div>
     </div>
 
@@ -89,11 +110,9 @@
         </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- JavaScript e Bootstrap Bundle con Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
