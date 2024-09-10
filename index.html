@@ -359,14 +359,18 @@
             50% { transform: scale(1.1); opacity: 1; }
             100% { transform: scale(1); }
         }
-        @media (max-width: 768px) {
-    .your-heading-class {
-        font-size: 16px; /* Cambia questa dimensione a tuo piacimento */
+        @media only screen and (max-width: 768px) {
+    .hero {
+        text-align: center; /* Centra il testo nella sezione hero */
+    }
+
+    .hero h1 {
+        font-size: 1.5em; /* Mantieni una dimensione grande ma ridotta rispetto al desktop */
+        margin: 0 auto; /* Imposta il margine automatico per centrare l'intestazione */
     }
 }
-h1.your-heading-class {
-    font-size: 16px !important;
-}
+
+
 
     </style>
 </head>
