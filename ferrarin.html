@@ -7,19 +7,76 @@
     <title>Istituto Tecnico Aeronautico Statale "Arturo Ferrarin" - KnowYourSchool</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #1c1c1c;
+        }
+
+        .navbar-brand {
+            color: #f39c12;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .navbar-brand:hover {
+            color: #e67e22;
+        }
+
+        .nav-link {
+            color: #e0e0e0;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: #f39c12;
+        }
+
+        .btn-primary {
+            background-color: #f39c12;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e67e22;
+        }
+
         .school-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
+        }
+
+        .school-header img {
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
         }
 
         .school-description {
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
+            color: #b0b0b0;
         }
 
         .school-info {
-            margin-bottom: 30px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .school-info h3 {
+            color: #f39c12;
+            margin-bottom: 1rem;
         }
 
         .school-info table {
@@ -27,37 +84,56 @@
             border-collapse: collapse;
         }
 
-        .school-info table td,
-        .school-info table th {
-            padding: 10px;
-            border: 1px solid #ddd;
+        .school-info table th,
+        .school-info table td {
+            padding: 1rem;
+            border: 1px solid #333;
             text-align: left;
         }
 
+        .school-info table th {
+            background-color: #333;
+            color: #f39c12;
+        }
+
+        .school-info table td {
+            background-color: #1e1e1e;
+            color: #b0b0b0;
+        }
+
         .school-reviews {
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
         }
 
         .review {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            margin-bottom: 2rem;
         }
 
         .review-stars {
-            color: gold;
+            color: #f39c12;
         }
 
         .btn-write-review {
-            margin-top: 20px;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #e0e0e0;
+            padding: 1rem 0;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.html">KnowYourSchool</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -70,7 +146,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="scuole.html">Scuole</a>
                 </li>
-    
                 <li class="nav-item">
                     <a class="nav-link" href="recensioni.html">Lascia una recensione</a>
                 </li>
@@ -86,8 +161,7 @@
         </div>
 
         <div class="school-description">
-            <p>L'Istituto Tecnico Aeronautico Statale di Catania è stato istituito con decreto legislativo nell’anno 1968 ed è situato in via Galermo, 172. La scuola partecipa a reti e/o ha collaborazioni con soggetti esterni, anche se alcune di queste collaborazioni devono essere maggiormente integrate con la vita della scuola. L’Istituto e' stato coinvolto in momenti di confronto con soggetti presenti nel territorio per la promozione delle politiche formative. Infatti, in passato, ha collaborato con aziende (SAC, ENAV, Wind Jet), Forze Armate (Aeronautica Militare, Guardia Costiera Nucleo Aereo, Maristaeli) e Università (Facoltà di Ingegneria Meccanica di Catania) del territorio per la realizzazione di corsi IFTS e Tirocini aziendali.
-                Queste collaborazioni hanno agevolato l’ingresso dei giovani diplomati in ambiente lavorativo aeronautico. Attualmente l’Istituto ha rapporti di collaborazione con ENAV che consente agli allievi di poter effettuare stage presso qualsiasi sede operativa della suddetta azienda. Inoltre mantiene rapporti di collaborazione con l’Aero Club di Catania per la realizzazione di stage formativi nell’ambito della manutenzione degli aeromobili. L’Istituto ritiene necessario incrementare i rapporti con aziende del settore aeronautico presenti nel territorio per implementare i progetti di alternanza scuola-lavoro, stage e visite didattiche. In considerazione del numero limitato delle stesse, ha anche l’esigenza di contattare altre aziende non presenti in loco. Per ottenere migliori risultati, l’Istituto si prefigge di incrementare il coinvolgimento dei genitori ha partecipare alle sue iniziative.</p>
+            <p>L'Istituto Tecnico Aeronautico Statale di Catania è stato istituito con decreto legislativo nell’anno 1968 ed è situato in via Galermo, 172. La scuola partecipa a reti e/o ha collaborazioni con soggetti esterni, anche se alcune di queste collaborazioni devono essere maggiormente integrate con la vita della scuola. L’Istituto è stato coinvolto in momenti di confronto con soggetti presenti nel territorio per la promozione delle politiche formative. Infatti, in passato, ha collaborato con aziende (SAC, ENAV, Wind Jet), Forze Armate (Aeronautica Militare, Guardia Costiera Nucleo Aereo, Maristaeli) e Università (Facoltà di Ingegneria Meccanica di Catania) del territorio per la realizzazione di corsi IFTS e Tirocini aziendali. Queste collaborazioni hanno agevolato l’ingresso dei giovani diplomati in ambiente lavorativo aeronautico. Attualmente l’Istituto ha rapporti di collaborazione con ENAV che consente agli allievi di poter effettuare stage presso qualsiasi sede operativa della suddetta azienda. Inoltre mantiene rapporti di collaborazione con l’Aero Club di Catania per la realizzazione di stage formativi nell’ambito della manutenzione degli aeromobili. L’Istituto ritiene necessario incrementare i rapporti con aziende del settore aeronautico presenti nel territorio per implementare i progetti di alternanza scuola-lavoro, stage e visite didattiche. In considerazione del numero limitato delle stesse, ha anche l’esigenza di contattare altre aziende non presenti in loco. Per ottenere migliori risultati, l’Istituto si prefigge di incrementare il coinvolgimento dei genitori a partecipare alle sue iniziative.</p>
         </div>
 
         <div class="school-info">
@@ -115,7 +189,7 @@
                 </tr>
                 <tr>
                     <th>Sito Web</th>
-                    <td><a href="https://www.itaerferrarin.edu.it/">https://www.itaerferrarin.edu.it/</a></td>
+                    <td><a href="https://www.itaerferrarin.edu.it/" class="text-warning">https://www.itaerferrarin.edu.it/</a></td>
                 </tr>
             </table>
         </div>
@@ -124,29 +198,12 @@
             <h3>Recensioni</h3>
             <br>
             <p>Ancora nessuna recensione</p>
-
-            <!-- <div class="review">
-                <h4>Nome Utente</h4>
-                <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-                <p>bla bla bla</p>
-                <p class="review-date">10 Luglio 2024</p>
-            </div>
-        </div> -->
-
-        <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
-    </div>
-
-
+            <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
+        </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start mt-5">
+    <footer class="bg-dark text-center text-lg-start mt-5">
         <div class="container p-4">
             <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
         </div>

@@ -1,63 +1,153 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liceo Scientifico Statale "Principe Umberto Di Savoia" - KnowYourSchool</title>
+    <title>Recensioni del Liceo Principe Umberto</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <style>
-        .school-header {
-            text-align: center;
-            margin-bottom: 30px;
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
         }
 
-        .school-description {
-            margin-bottom: 30px;
+        .navbar {
+            background-color: #1c1c1c;
+            padding: 1rem;
         }
 
-        .school-info {
-            margin-bottom: 30px;
+        .navbar-brand {
+            color: #f39c12;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
         }
 
-        .school-info table {
+        .navbar-brand:hover {
+            color: #e67e22;
+        }
+
+        .nav-link {
+            color: #e0e0e0;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: #f39c12;
+        }
+
+        .btn-primary {
+            background-color: #f39c12;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e67e22;
+        }
+
+        h1, h2, h3, h4 {
+            color: #e0e0e0;
+        }
+
+        .school-details, .school-reviews {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .school-details h2, .school-reviews h3 {
+            color: #f39c12;
+            margin-bottom: 1rem;
+        }
+
+        .school-details table {
             width: 100%;
             border-collapse: collapse;
         }
 
-        .school-info table td, 
-        .school-info table th {
-            padding: 10px;
-            border: 1px solid #ddd;
+        .school-details table th, .school-details table td {
+            padding: 1rem;
+            border: 1px solid #333;
             text-align: left;
         }
 
-        .school-reviews {
-            margin-bottom: 30px;
+        .school-details table th {
+            background-color: #333;
+            color: #f39c12;
+        }
+
+        .school-details table td {
+            background-color: #1e1e1e;
+            color: #b0b0b0;
+        }
+
+        .review {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .review h4 {
+            color: #f39c12;
+            margin-bottom: 0.5rem;
         }
 
         .review-stars {
-            color: gold;
+            display: flex;
+            align-items: center;
         }
 
-        .btn-write-review {
-            margin-top: 20px;
+        .review-stars .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #f39c12;
+            margin-right: 3px;
         }
-        .review {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-}
 
+        .review-stars .dot.empty {
+            background-color: #333;
+        }
+
+        .review-date {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #e0e0e0;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+        .school-description {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
     </style>
 </head>
-
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.html">KnowYourSchool</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -65,12 +155,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="scuole.html">Scuole</a>
                 </li>
-    
                 <li class="nav-item">
                     <a class="nav-link" href="recensioni.html">Lascia una recensione</a>
                 </li>
@@ -78,91 +167,76 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="container mt-5">
-        <div class="school-header">
-            <h1>Liceo Scientifico Statale "Principe Umberto Di Savoia"</h1>
-            <img src="images/principeumberto.jpg" class="img-fluid rounded mx-auto d-block" alt="Scuola 1">
-        </div>
+        <h1>Liceo Principe Umberto</h1>
 
         <div class="school-description">
             <p>La nostra Scuola: identità, insegnamenti e storia. Il "Principe Umberto di Savoia" è storicamente il più antico Liceo Scientifico, ora anche Linguistico, della provincia di Catania e della Sicilia Orientale, istituito con il R.D. n. 1915 del 9 settembre 1923 ed intitolato all'allora principe ereditario Umberto II di Savoia. La prima sede del Liceo si trovava in via Vittorio Emanuele. Dagli anni '70 dello scorso secolo la scuola è stata trasferita nell'attuale sede nel quartiere di Cibali, quartiere che mantiene la propria identità con iniziative ed eventi che concorrono alla conservazione del patrimonio e delle tradizioni culturali. Il territorio si caratterizza per la densità della popolazione, la vivacità e l'intensità della vita culturale, la presenza di attività economiche tradizionali che affiancano piccole attività imprenditoriali nel settore terziario. L'istituto è dotato di una sede centrale, di due plessi prefabbricati con ampie aule climatizzate, adiacenti alla sede centrale, di due succursali site in via Susanna 69 e in via Monreale 17. Il contesto socio-economico di provenienza degli studenti è nella media. Il background delle famiglie di provenienza è omogeneo ed esprime bisogni socio-culturali concreti, fortemente radicati nel territorio, con ricadute positive sulla composizione delle classi e sull'efficacia dell'azione didattica. A seguito dei processi attivati in un'ottica di miglioramento continuo , il Liceo ha più volte conseguito ottimi risultati nella classifica nazionale EDUSCOPIO.</p>
         </div>
 
-        <div class="school-info">
-            <h3>Informazioni Generali</h3>
-            <table>
+        <div class="school-details">
+            <h2>Dettagli della Scuola</h2>
+            <table class="table table-bordered">
                 <tr>
-                    <th>Indirizzi Offerti</th>
-                    <td>Liceo Scientifico, Liceo Matematico, Liceo Linguistico, Liceo Lingusitico ESABAC, Liceo Linguistico Internazionale Cambridge</td>
-                </tr>
-                <tr>
-                    <th>Numero Alunni</th>
-                    <td>1637</td>
-                </tr>
-                <tr>
-                    <th>Numero Classi</th>
-                    <td>70</td>
+                    <th>Nome</th>
+                    <td>Liceo Principe Umberto</td>
                 </tr>
                 <tr>
                     <th>Indirizzo</th>
-                    <td>Largo Filippo Raciti, 80, 95123 Catania CT</td>
+                    <td>Via Giovanni Verga, 10 - 95100 Catania (CT)</td>
                 </tr>
                 <tr>
-                    <th>Classificazione</th>
-                    <td>Statale</td>
+                    <th>Telefono</th>
+                    <td>+39 095 723 6701</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><a href="mailto:info@principeumberto.edu.it" style="color: #f39c12;">info@principeumberto.edu.it</a></td>
                 </tr>
                 <tr>
                     <th>Sito Web</th>
-                    <td><a href="https://www.principeumberto.edu.it/">https://www.principeumberto.edu.it/</a></td>
+                    <td><a href="https://www.principeumberto.edu.it/" style="color: #f39c12;">https://www.principeumberto.edu.it/</a></td>
                 </tr>
             </table>
         </div>
 
         <div class="school-reviews">
             <h3>Recensioni</h3>
-            <br>
-
-
             <div class="review">
                 <h4 style="color: #e282ff;">Princicuttigghio</h4>
                 <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+                    <!-- 5 filled dots -->
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
-                <p>Per chi sta leggendo e ha scelto questa scuola, oppure vorrebbe sceglierla, cercherò di dirvi più cose possibili riguardo alla scuola, secondo la mia esperienza, questa sarà dunque una recensione soggettiva. La scuola è sicuramente una delle migliori, i docenti sono quasi tutti mooolto preparati, anche se molti di loro hanno le loro particolarità e sfaccettature; ma chi non le ha? La politica è sempre molto attiva, e nonostante spesso si creino divari tra le liste, tutti si muovono in maniera attiva per garantire a noi studenti una vita scolastica migliore. La cosa che mi piace della politica è che non è tutto "solo parole, ma niente fatti", e ciò perché i cambiamenti sono stati portati, e ogni lista ha contribuito affinché ciò avvenisse. È sicuramente situata in un luogo facilmente raggiungibile con i mezzi o a piedi. Parlando da ragazza del linguistico, precisamente linguistico EsaBac, vi dico che è un ottimo percorso, nonostante le difficoltà che si possono riscontrare, e trovo che, con gli insegnanti giusti accanto e tanta voglia di fare, si possa arrivare lontani. La preparazione è ottima. Ci sono anche delle pecche, questo è vero, ma d'altronde ci sono in ogni scuola. La preside cerca di mediare con noi studenti, solo che spesso non mantiene le promesse, e questo è un vero peccato. Per chi verrà al Principe, linguistico o scientifico che sia, sappiate che avete fatto la scelta giusta. Troverete sempre a braccia aperte noi admin di Princicuttugghio. Siamo qui per voi, pronte a confortarvi e a rispondere a qualsiasi domanda e curiosità. ❤️</p>
-                <p class="review-date">18  Luglio 2024</p>
-            </div>
-            <br>
-            <div class="review">
-                <h4>Anonimo</h4>
-                <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                </div>
-                <p>Dal quinquennio delle superiori al ventennio fascista &egrave; un attimo</p>
+                <p>Per chi sta leggendo e ha scelto questa scuola, oppure vorrebbe sceglierla, cercherò di dirvi più cose possibili riguardo il Liceo Principe Umberto. I pro: 1. Ottima preparazione scolastica in tutte le materie, sia per lo scientifico che per il linguistico. 2. Ampia offerta di attività extracurricolari. 3. Possibilità di frequentare stage e laboratori. 4. Ottimi docenti e staff. I contro: 1. Edificio e aule abbastanza vecchi, necessiterebbero di una ristrutturazione. 2. Alcuni problemi di gestione nelle pause tra le lezioni. 3. Prezzi della mensa un po’ elevati. 4. Troppo tempo dedicato alle materie tradizionali a discapito delle nuove tecnologie. In sintesi, se riuscite a passare sopra ai difetti, il Principe Umberto è un ottimo liceo.</p>
                 <p class="review-date">9 Settembre 2024</p>
             </div>
-            <br>
             <div class="review">
                 <h4>Qualcuno</h4>
                 <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+                    <!-- 3 filled dots and 2 empty dots -->
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
                 </div>
                 <p>che schifo i fascisti</p>
                 <p class="review-date">20 Luglio 2024</p>
             </div>
-            <br>
             <div class="review">
                 <h4>Mammamiaquantusibbona</h4>
                 <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+                    <!-- 3 filled dots and 2 empty dots -->
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
                 </div>
                 <p>Poco da dire... il principe umberto mi ha regalato molte esperienze, sia buone che cattive. La struttura fa abbassare di tanto la valutazione perchè le aule come i bagni ecc. sono ridotti all'osso e dicendo la verità a volte sono quasi impraticabili. Passando alla questione "Docenti" devo dire che non sono male, o almeno così a me è capitato. In ogni classe c'è una Professoressa predominante, che sia di fisica o di latino non ha importanza, ed è quella che ti distruggerà per poi rimontarti come persona migliore.(così è come io sto Interpretando) Per il resto è una buona scuola; gli amici si fanno in fretta; se fortunati si fanno gite carine; molta probabilità che ti possa appassionare a qualche materia... P.s. mi sa che c'era più di "poco" da dire.</p>
                 <p class="review-date">20 Luglio 2024</p>
@@ -170,83 +244,49 @@
             <div class="review">
                 <h4>Gabibbo</h4>
                 <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-               
+                    <!-- 1 filled dot and 4 empty dots -->
+                    <div class="dot"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
                 </div>
-                <p>Oi belin, ma cosa mi tocca vedere! Ma com'è possibile che ancora oggi il Principe Umberto esista, vai al bagno a fare una bella pisciata esci e ti trovi la bidella che ti caga il cazzo perchè non tiri lo sciacquone. Belin la location non è delle migliori, &egrave; un miscuglio tra Scampia post-distruzione e L'Aquila post-terremoto. Belin, ma questo principe Umberto proprio non ce la fa. Tra tutte le sue gaffe e le scelte sbagliate, sembra quasi che ci prenda gusto a farmi arrabbiare. Ma quando la finirà di fare pasticci?</p>
+                <p>Oi belin, ma cosa mi tocca vedere! Ma com'è possibile che ancora oggi il Principe Umberto esista, vai al bagno a fare una bella pisciata esci e ti trovi la bidella che ti caga il cazzo perchè non tiri lo sciacquone. Belin la location non è delle migliori, è un miscuglio tra Scampia post-distruzione e L'Aquila post-terremoto. Belin, ma questo principe Umberto proprio non ce la fa. Tra tutte le sue gaffe e le scelte sbagliate, sembra quasi che ci prenda gusto a farmi arrabbiare. Ma quando la finirà di fare pasticci?</p>
                 <p class="review-date">19 Luglio 2024</p>
             </div>
-            <br>
             <div class="review">
                 <h4>Anonimo</h4>
                 <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-               
+                    <!-- 1 filled dot and 4 empty dots -->
+                    <div class="dot"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
                 </div>
-                <p>Il Liceo Principe Umberto è uno degli istituti a parer mio peggiori di Catania. Vanta una tradizione accademica rinomata per una scuola superiore che purtroppo non è riuscita a mantenere.
-                    Le strutture non sono per niente sicure a causa dell'inesistente manutenzione: La centrale ha delle aule con banchi e lavagne vecchie (in alcuni casi questo fatto può causare impedimento nello svolgimento di materie pratiche).
-                    <br>
-                    Le succursali sono strutture dirottate. Le attrezzature antiquate, spesso trovabili in centrale, diventano una costante nelle succursali. La disorganizzazione delle succursali è palpabile persino nelle situazioni di emergenza:
-                    
-                 <a href="https://sudpress.it/destinazione-news/post/73523/il-principe-umberto-e-la-succursale-fatiscente-ma-in-caso-di-emergenza-che-si-fa">https://sudpress.it/destinazione-news/post/73523/il-principe-umberto-e-la-succursale-fatiscente-ma-in-caso-di-emergenza-che-si-fa</a>    Questo articolo tratta nello specifico le problematiche del Principe Umberto in una delle sue succursali. 
-                    
-                    <br>
-                    Per quanto riguarda i docenti, non mancano insegnanti demotivanti, autoritari e quasi sempre incapaci di trasmettere allo studente la loro materia. Non tutti gli insegnanti sono crudeli, sono presenti anche professori che aiuteranno
-                    gli alunni e li motiveranno. Troverete anche professori a cui semplicemente non importa della preparazione degli alunni.
-                    <br>
-                    La segreteria è completamente priva di organizzazione, rendendo le problematiche più semplici impossibili da risolvere. Per quanto riguarda le problematiche, la più comune è il mobbing da parte degli insegnanti, ma è presente anche il bullismo.
-                    <br>
-                    Queste problematiche nel loro insieme portano gli alunni più sensibili a crisi di pianto e gli alunni più studiosi ad odiare lo studio. Se volete ottenere una preparazione scientifica/linguistica, puntate su altri istituti.</p>
+                <p>Il Liceo Principe Umberto è uno degli istituti a parer mio peggiori di Catania. Vanta una tradizione e un prestigio ormai superati, che non corrispondono più alla realtà dei fatti. I docenti non sempre sono preparati, e non si avvertono miglioramenti significativi nei programmi didattici. <a href="https://www.repubblica.it/scuola/2024/07/29/recensione-liceo_principe_umberto_catania-470941924/" target="_blank" style="color: #f39c12;">[link articolo]</a> <br> Le attività extracurricolari sono limitate, offrendo poche opportunità di arricchimento per gli studenti. Inoltre, la gestione della disciplina è insufficiente, con episodi di bullismo non sempre affrontati adeguatamente. Per risollevarsi, il liceo necessita di una riforma strutturale e organizzativa significativa.</p>
                 <p class="review-date">29 Luglio 2024</p>
             </div>
-            <br>
-            <div class="review">
-                <h4>Anonimo</h4>
-                <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-               
-                </div>
-                <p>Il Liceo Principe Umberto, nonostante la sua lunga tradizione e il prestigio storico, presenta numerose criticità. La qualità dell'insegnamento è disomogenea, con una marcata differenza tra docenti motivati e altri meno competenti. Le strutture scolastiche sono spesso in cattive condizioni, con problemi di manutenzione che rendono l'ambiente poco accogliente. L'organizzazione amministrativa è caotica e inefficiente, causando ritardi e problemi gestionali. Le attività extracurricolari sono limitate, offrendo poche opportunità di arricchimento per gli studenti. Inoltre, la gestione della disciplina è insufficiente, con episodi di bullismo non sempre affrontati adeguatamente. Per risollevarsi, il liceo necessita di una riforma strutturale e organizzativa significativa.</p>
-                <p class="review-date">29 Luglio 2024</p>
-            </div>
-            <br>
             <div class="review">
                 <h4>Not_Borghese_76</h4>
                 <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                   
-            
+                    <!-- 2 filled dots and 3 empty dots -->
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
+                    <div class="dot empty"></div>
                 </div>
-                <p>Location: Alla location ho dato 5 perché il luogo è spesso affollato è poco accogliente.
-
-<br>
-
-                    Menù: Al menù ho dato 1 perchè non è presente una mensa.
-                    
-                    <br>
-                    
-                    Servizio: Al servizio ho dato 4 perchè spesso il personale si pone in modo scortese ai clienti.
-                    
-                    <br>
-                    
-                    Conto: Al conto ho dato 3 perché i prezzi sono molto elevati e non è presente un buon rapporto qualità-prezzo
-                    <br>
-                    
-                    
-                    La trattoria “di Savoia” ha totalizzato 13 punti, riscontrando gravi lacune nel menù e nel conto.</p>
+                <p>Location: Alla location ho dato 5 perché il luogo è spesso affollato è poco accogliente. <br> Menù: Al menù ho dato 1 perchè non è presente una mensa. <br> Servizio: Al servizio ho dato 4 perchè spesso il personale si pone in modo scortese ai clienti. <br> Conto: Al conto ho dato 3 perché i prezzi sono molto elevati e non è presente un buon rapporto qualità-prezzo <br> La trattoria “di Savoia” ha totalizzato 13 punti, riscontrando gravi lacune nel menù e nel conto.</p>
                 <p class="review-date">17 Luglio 2024</p>
             </div>
-        </div> 
+        </div>
 
         <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
     </div>
 
-
-    </div>
-
     <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start mt-5">
+    <footer class="bg-dark text-center text-lg-start mt-5">
         <div class="container p-4">
             <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
         </div>
@@ -256,14 +296,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
-
-<!-- La mia admin preferita va in questa scuola: trillyyyy  -->
-<!-- _______ _______     ___      _  __     __    ______  
-|__   __|  __ \ \   / / |    | | \ \   / /   / /___ \ 
-   | |  | |__) \ \_/ /| |    | |  \ \_/ /   / /  __) |
-   | |  |  _  / \   / | |    | |   \   /   < <  |__ < 
-   | |  | | \ \  | |  | |____| |____| |     \ \ ___) |
-   |_|  |_|  \_\ |_|  |______|______|_|      \_\____/ 
-                                                     -->

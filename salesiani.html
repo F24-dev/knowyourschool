@@ -5,21 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Istituto Salesiano "San Francesco di Sales" - KnowYourSchool</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <style>
-        .school-header {
-            text-align: center;
-            margin-bottom: 30px;
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
         }
 
-        .school-description {
-            margin-bottom: 30px;
+        .navbar {
+            background-color: #1c1c1c;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            color: #f39c12;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .navbar-brand:hover {
+            color: #e67e22;
+        }
+
+        .nav-link {
+            color: #e0e0e0;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: #f39c12;
+        }
+
+        .btn-primary {
+            background-color: #f39c12;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e67e22;
+        }
+
+        .school-header h1 {
+            color: #e0e0e0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .school-description p {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
         }
 
         .school-info {
-            margin-bottom: 30px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .school-info h3 {
+            color: #f39c12;
+            margin-bottom: 1rem;
         }
 
         .school-info table {
@@ -27,37 +83,79 @@
             border-collapse: collapse;
         }
 
-        .school-info table td,
-        .school-info table th {
-            padding: 10px;
-            border: 1px solid #ddd;
+        .school-info table th, .school-info table td {
+            padding: 1rem;
+            border: 1px solid #333;
             text-align: left;
         }
 
-        .school-reviews {
-            margin-bottom: 30px;
+        .school-info table th {
+            background-color: #333;
+            color: #f39c12;
+        }
+
+        .school-info table td {
+            background-color: #1e1e1e;
+            color: #b0b0b0;
         }
 
         .review {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .review h4 {
+            color: #f39c12;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-stars .fa {
+            color: #f39c12;
+        }
+
+        .review-date {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #e0e0e0;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0;
         }
 
         .review-stars {
-            color: gold;
+            display: flex;
+            align-items: center;
         }
 
-        .btn-write-review {
-            margin-top: 20px;
+        .review-stars .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #f39c12;
+            margin-right: 3px;
+        }
+
+        .review-stars .dot.empty {
+            background-color: #333;
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.html">KnowYourSchool</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -65,12 +163,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="scuole.html">Scuole</a>
                 </li>
-    
                 <li class="nav-item">
                     <a class="nav-link" href="recensioni.html">Lascia una recensione</a>
                 </li>
@@ -80,14 +177,13 @@
 
     <!-- Main Content -->
     <div class="container mt-5">
-        <div class="school-header">
+        <div class="school-header text-center">
             <h1>Istituto Salesiano "San Francesco di Sales"</h1>
-            <img src="images/salesiani.jpg" class="img-fluid rounded mx-auto d-block" alt="Scuola 1">
+            <img src="images/salesiani.jpg" class="img-fluid rounded mx-auto d-block" alt="Scuola Salesiani">
         </div>
 
-        <div class="school-description">
-            <p>Siamo Salesiani di Don Bosco (SDB), una congregazione di sacerdoti e fratelli laici, consacrati con voti semplici (di obbedienza, castità e povertà), impegnati nell’educazione e nella formazione dei giovani, particolarmente dei “più poveri e abbandonati”. Il nostro obiettivo, sulle orme di Don Bosco, è di formare «buoni cristiani e onesti cittadini», attraverso oratori, scuole, centri professionali e altri ambienti reali e virtuali.
-                Lo stile educativo che ci caratterizza è denominato «sistema preventivo» che ha come capisaldi l’amorevolezza, la ragione e la religione. Siamo, infatti, convinti che è meglio prevenire, anziché reprimere, è meglio evitare occasioni per fare il male che infliggere sanzioni per il male già commesso. A partire dall’esperienza originaria e originale dell’Oratorio di Valdocco per la gioventù operaia e urbana torinese, i SDB si sono impegnati a costruire un’estesa rete di istituzioni educative che ha avuto rapida diffusione mondiale, dapprima in Francia e in America Latina (1875), poi dall’Asia all’Africa in altre terre di missione. In Sicilia i primi salesiani sono arrivati nel 1879. La piattaforma comune di tutti gli organismi e strutture operanti nell’Opera salesiana “San Francesco di Sales” è costituita dalla Comunità Educativo-Pastorale (CEP) che ha il suo nucleo animatore nel Consiglio della CEP stessa. Oltre a costituire il soggetto ultimo dell’azione educativa e pastorale, addita le grandi linee progettuali dell’opera, programma e realizza l’attuazione dei momenti comuni, ne verifica gli esiti formativi negli adulti e quelli educativi in ragazzi e giovani.</p>
+        <div class="school-description text-center">
+            <p>La nostra Scuola: identità, insegnamenti e storia. Il "San Francesco di Sales" è un istituto educativo con una lunga tradizione di impegno nella formazione dei giovani. I Salesiani di Don Bosco sono presenti in tutto il mondo e il nostro istituto rappresenta un punto di riferimento importante per l'educazione e la crescita dei giovani. La nostra scuola si distingue per la qualità dell'insegnamento e per il suo approccio educativo basato su valori solidi e una forte vocazione al servizio.</p>
         </div>
 
         <div class="school-info">
@@ -115,38 +211,35 @@
                 </tr>
                 <tr>
                     <th>Sito Web</th>
-                    <td><a href="https://www.salesianicibali.it/">https://www.salesianicibali.it/</a></td>
+                    <td><a href="https://www.salesianicibali.it/" style="color: #f39c12;">https://www.salesianicibali.it/</a></td>
                 </tr>
             </table>
         </div>
 
         <div class="school-reviews">
             <h3>Recensioni</h3>
-            <br>
             <p>Ancora nessuna recensione</p>
-
+            <!-- Commentato per esempio -->
             <!-- <div class="review">
                 <h4>Nome Utente</h4>
                 <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot empty"></span>
                 </div>
                 <p>bla bla bla</p>
                 <p class="review-date">10 Luglio 2024</p>
-            </div>
-        </div> -->
+            </div> -->
+        </div>
 
         <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start mt-5">
-        <div class="container p-4">
-            <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

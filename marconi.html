@@ -7,19 +7,79 @@
     <title>Istituto Tecnico Industriale Statale "G. Marconi" - KnowYourSchool</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #1c1c1c;
+        }
+
+        .navbar-brand {
+            color: #f39c12;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .navbar-brand:hover {
+            color: #e67e22;
+        }
+
+        .nav-link {
+            color: #e0e0e0;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: #f39c12;
+        }
+
+        .btn-primary {
+            background-color: #f39c12;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e67e22;
+        }
+
         .school-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
+        }
+
+        .school-header img {
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
         }
 
         .school-description {
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
+            color: #b0b0b0;
+        }
+
+        .school-description p {
+            margin-bottom: 1.5rem;
         }
 
         .school-info {
-            margin-bottom: 30px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .school-info h3 {
+            color: #f39c12;
+            margin-bottom: 1rem;
         }
 
         .school-info table {
@@ -27,37 +87,56 @@
             border-collapse: collapse;
         }
 
-        .school-info table td,
-        .school-info table th {
-            padding: 10px;
-            border: 1px solid #ddd;
+        .school-info table th,
+        .school-info table td {
+            padding: 1rem;
+            border: 1px solid #333;
             text-align: left;
         }
 
+        .school-info table th {
+            background-color: #333;
+            color: #f39c12;
+        }
+
+        .school-info table td {
+            background-color: #1e1e1e;
+            color: #b0b0b0;
+        }
+
         .school-reviews {
-            margin-bottom: 30px;
+            margin-bottom: 2rem;
         }
 
         .review {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            margin-bottom: 2rem;
         }
 
         .review-stars {
-            color: gold;
+            color: #f39c12;
         }
 
         .btn-write-review {
-            margin-top: 20px;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #e0e0e0;
+            padding: 1rem 0;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.html">KnowYourSchool</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -70,7 +149,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="scuole.html">Scuole</a>
                 </li>
-    
                 <li class="nav-item">
                     <a class="nav-link" href="recensioni.html">Lascia una recensione</a>
                 </li>
@@ -82,27 +160,19 @@
     <div class="container mt-5">
         <div class="school-header">
             <h1>Istituto Tecnico Industriale Statale "G. Marconi"</h1>
-            <img src="images/marconi.jpg" class="img-fluid rounded mx-auto d-block" alt="Scuola 1">
+            <img src="images/marconi.jpg" class="img-fluid rounded mx-auto d-block" alt="Istituto Tecnico Industriale Statale G. Marconi">
         </div>
 
         <div class="school-description">
-            <p>L’istituto di istruzione tecnica del plesso Marconi offre un corpo docenti dotato di professionalità, competenza, spirito di innovazione e attenzione alle necessità formative e umane dei giovani discenti. Grazie alle competenze specifiche dei vari ambiti e grazie agli strumenti tecnologici presenti nell’istituto, i docenti sono in grado di guidare gli alunni nello studio delle discipline tecnico-scientifico-linguistiche secondo una moderna metodologia didattica che dà rilievo all’esperienza piuttosto che alla semplice conoscenza teorica, alla verifica sperimentale piuttosto che alle nozioni astratte.
-
-                Il plesso Marconi offre una ricca strumentazione tecnico-scientifica, organizzata in vasti ambienti laboratoriali modernamente concepiti e attrezzati, utilizzati anche da enti esterni per le specificità tecniche di cui sono dotati. 
-                
-                Il plesso è stato scelto insieme ad altre 9 strutture in tutt’Italia per la realizzazione di un  “Future lab”, laboratorio di ultima generazione pensato dal Miur per la formazione dei docenti, estremamente versatile e polifunzionale, dotato anche di un futuristico studio radiofonico.
-                
-                Oltre ai numerosi laboratori di Informatica sono presenti laboratori scientifici – dove realizzare esperienze di Chimica, Fisica, Scienze naturali e biologiche -, laboratori multimediali per lo studio delle lingue (inglese, cinese), spazi attrezzati dove gli alunni seguono le discipline specialistiche di indirizzo come Tecnologia, Costruzioni, Disegno tecnico. Non mancano la biblioteca e la palestra per le attività di scienze motorie, unitamente ad alcuni spazi esterni attrezzati. 
-                
-                Grazie alle opportunità conoscitive e formative offerte dai nostri indirizzi di istruzione tecnica – ad esempio la collaborazione con varie aziende ed enti del territorio, i progetti di continuità con i corsi universitari a indirizzo tecnico-scientifico, le esperienze di alternanza scuola-lavoro – gli studenti vengono aiutati a diventare competitivi nel prosieguo della formazione universitaria o all’interno del mercato internazionale del lavoro.
-                
-                Particolare importanza ha assunto negli ultimi anni l’attenzione alla dimensione dell’ internazionalizzazione, attraverso una serie di partnership e gemellaggi con scuole italiane e straniere, con il fine di favorire il confronto, lo scambio, la condivisione di metodologie didattiche, saperi e linguaggi tecnico-scientifici. L’esempio principale è lo scambio culturale con la Cina avviato nel 2009-10 con il Politecnico JinYu di Pechino, a cui si sono aggiunte recentemente altre opportunità di gemellaggi e di scambi culturali.
-                
-                STORIA: L’ITIS “G. Marconi” nasce nell’a.s. 1972/73 come terzo istituto industriale della città di Catania,  con una popolazione scolastica di appena 207 alunni distribuiti in nove classi, ospitato in un seminterrato di Corso Indipendenza e dotato della specializzazione di Telecomunicazioni.
-                
-                Successivamente, nel 1979/80, vengono attivate la specializzazione in Informatica e il corso sperimentale AMBRA per Telecomunicazioni. Nel 1988/89 la sezione sperimentale Edilizia.
-                
-                A seguito del duplicarsi della popolazione scolastica, l’Istituto si trasferisce nell’attuale sede di via Vescovo Maurizio.</p>
+            <p>L’istituto di istruzione tecnica del plesso Marconi offre un corpo docenti dotato di professionalità, competenza, spirito di innovazione e attenzione alle necessità formative e umane dei giovani discenti. Grazie alle competenze specifiche dei vari ambiti e grazie agli strumenti tecnologici presenti nell’istituto, i docenti sono in grado di guidare gli alunni nello studio delle discipline tecnico-scientifico-linguistiche secondo una moderna metodologia didattica che dà rilievo all’esperienza piuttosto che alla semplice conoscenza teorica, alla verifica sperimentale piuttosto che alle nozioni astratte.</p>
+            <p>Il plesso Marconi offre una ricca strumentazione tecnico-scientifica, organizzata in vasti ambienti laboratoriali modernamente concepiti e attrezzati, utilizzati anche da enti esterni per le specificità tecniche di cui sono dotati.</p>
+            <p>Il plesso è stato scelto insieme ad altre 9 strutture in tutt’Italia per la realizzazione di un “Future lab”, laboratorio di ultima generazione pensato dal Miur per la formazione dei docenti, estremamente versatile e polifunzionale, dotato anche di un futuristico studio radiofonico.</p>
+            <p>Oltre ai numerosi laboratori di Informatica sono presenti laboratori scientifici – dove realizzare esperienze di Chimica, Fisica, Scienze naturali e biologiche –, laboratori multimediali per lo studio delle lingue (inglese, cinese), spazi attrezzati dove gli alunni seguono le discipline specialistiche di indirizzo come Tecnologia, Costruzioni, Disegno tecnico. Non mancano la biblioteca e la palestra per le attività di scienze motorie, unitamente ad alcuni spazi esterni attrezzati.</p>
+            <p>Grazie alle opportunità conoscitive e formative offerte dai nostri indirizzi di istruzione tecnica – ad esempio la collaborazione con varie aziende ed enti del territorio, i progetti di continuità con i corsi universitari a indirizzo tecnico-scientifico, le esperienze di alternanza scuola-lavoro – gli studenti vengono aiutati a diventare competitivi nel prosieguo della formazione universitaria o all’interno del mercato internazionale del lavoro.</p>
+            <p>Particolare importanza ha assunto negli ultimi anni l’attenzione alla dimensione dell’internazionalizzazione, attraverso una serie di partnership e gemellaggi con scuole italiane e straniere, con il fine di favorire il confronto, lo scambio, la condivisione di metodologie didattiche, saperi e linguaggi tecnico-scientifici. L’esempio principale è lo scambio culturale con la Cina avviato nel 2009-10 con il Politecnico JinYu di Pechino, a cui si sono aggiunte recentemente altre opportunità di gemellaggi e di scambi culturali.</p>
+            <p><strong>STORIA:</strong> L’ITIS “G. Marconi” nasce nell’a.s. 1972/73 come terzo istituto industriale della città di Catania, con una popolazione scolastica di appena 207 alunni distribuiti in nove classi, ospitato in un seminterrato di Corso Indipendenza e dotato della specializzazione di Telecomunicazioni.</p>
+            <p>Successivamente, nel 1979/80, vengono attivate la specializzazione in Informatica e il corso sperimentale AMBRA per Telecomunicazioni. Nel 1988/89 la sezione sperimentale Edilizia.</p>
+            <p>A seguito del duplicarsi della popolazione scolastica, l’Istituto si trasferisce nell’attuale sede di via Vescovo Maurizio.</p>
         </div>
 
         <div class="school-info">
@@ -130,35 +200,20 @@
                 </tr>
                 <tr>
                     <th>Sito Web</th>
-                    <td><a href="https://www.iismarconi-mangano.edu.it/">https://www.iismarconi-mangano.edu.it/</a></td>
+                    <td><a href="https://www.iismarconi-mangano.edu.it/" style="color: #f39c12;">https://www.iismarconi-mangano.edu.it/</a></td>
                 </tr>
             </table>
         </div>
 
         <div class="school-reviews">
             <h3>Recensioni</h3>
-            <br>
             <p>Ancora nessuna recensione</p>
-
-            <!-- <div class="review">
-                <h4>Nome Utente</h4>
-                <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-                <p>bla bla bla</p>
-                <p class="review-date">10 Luglio 2024</p>
-            </div>
-        </div> -->
-
-        <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
+            <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
+        </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-light text-center text-lg-start mt-5">
+    <footer class="bg-dark text-center text-lg-start mt-5">
         <div class="container p-4">
             <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
         </div>
