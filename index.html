@@ -131,11 +131,11 @@
             }
             
             .hero {
-                padding: 4rem 1rem; /* Ridotto padding per schermi più piccoli */
+                padding: 3rem 1rem; /* Ridotto padding per schermi più piccoli */
             }
             
             .hero h1 {
-                font-size: 3rem; /* Ridotto font-size per schermi più piccoli */
+                font-size: 2rem; /* Ridotto font-size per schermi più piccoli */
             }
             
             .hero p {
@@ -152,23 +152,31 @@
 
         @media (max-width: 480px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 1.5rem; /* Ulteriore riduzione per schermi più piccoli */
             }
 
             .hero p {
-                font-size: 0.9rem;
+                font-size: 0.875rem; /* Ulteriore riduzione per schermi più piccoli */
             }
 
             .intro h2 {
-                font-size: 2rem;
+                font-size: 1.75rem; /* Ridotto per schermi più piccoli */
             }
 
             .intro p {
-                font-size: 1rem;
+                font-size: 0.875rem; /* Ridotto per schermi più piccoli */
             }
 
             .cards {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adatta la larghezza delle colonne */
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adatta la larghezza delle colonne */
+            }
+
+            .card h3 {
+                font-size: 1.4rem; /* Ridotto per schermi più piccoli */
+            }
+
+            .card p {
+                font-size: 0.875rem; /* Ridotto per schermi più piccoli */
             }
         }
 
@@ -278,7 +286,7 @@
 
         .card img {
             width: 100%;
-            height: auto; /* Adatta l'altezza in base alla larghezza */
+            height: auto;
             object-fit: cover;
             transition: opacity 0.3s;
         }
@@ -290,13 +298,13 @@
         .card h3 {
             font-size: 1.6rem;
             margin: 1rem;
-            color: #e0e0e0;
-            font-weight: 600;
+            color: #f39c12;
         }
 
         .card p {
+            font-size: 1rem;
             margin: 0 1rem 1rem;
-            color: #b0b0b0;
+            color: #e0e0e0;
         }
 
         footer {
@@ -351,11 +359,13 @@
             50% { transform: scale(1.1); opacity: 1; }
             100% { transform: scale(1); }
         }
-        /* Media Query per schermi piccoli */
-@media (max-width: 768px) {
-    .logo {
-        font-size: 1rem; /* Riduci la dimensione del font solo per il link con classe 'logo' */
+        @media (max-width: 768px) {
+    .your-heading-class {
+        font-size: 16px; /* Cambia questa dimensione a tuo piacimento */
     }
+}
+h1.your-heading-class {
+    font-size: 16px !important;
 }
 
     </style>
@@ -377,7 +387,7 @@
     <!-- Hero Section -->
     <section class="hero" data-aos="fade-up">
         <div class="container">
-            <h1 data-aos="fade-up" data-aos-delay="200">Benvenuto su KYS</h1>
+            <h1 data-aos="fade-up" data-aos-delay="200">Benvenuto su KnowYourSchool!</h1>
             
             <p data-aos="fade-up" data-aos-delay="400">Trova la scuola superiore perfetta a Catania attraverso le recensioni e valutazioni degli utenti.</p>
             <a href="scuole.html" data-aos="fade-up" data-aos-delay="600">Esplora le scuole</a>
