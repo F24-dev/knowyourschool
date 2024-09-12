@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liceo Statale "Giuseppina Turrisi Colonna"</title>
+    <title>Liceo Statale "Giuseppina Turrisi Colonna" - KnowYourSchool</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* Global Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #121212;
+            background: #121212;
             color: #e0e0e0;
             line-height: 1.6;
         }
@@ -63,16 +64,13 @@
             font-size: 2.5rem;
         }
 
-        .school-header img {
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+        .school-description {
+            margin-bottom: 2rem;
         }
 
-        .school-description {
-            text-align: center;
+        .school-description p {
             color: #b0b0b0;
             font-size: 1.1rem;
-            margin-bottom: 2rem;
         }
 
         .school-info {
@@ -93,8 +91,7 @@
             border-collapse: collapse;
         }
 
-        .school-info table th,
-        .school-info table td {
+        .school-info table th, .school-info table td {
             padding: 1rem;
             border: 1px solid #333;
             text-align: left;
@@ -110,11 +107,7 @@
             color: #b0b0b0;
         }
 
-        .school-reviews {
-            margin-bottom: 2rem;
-        }
-
-        .review {
+        .review-card {
             background-color: #1e1e1e;
             border: 1px solid #333;
             border-radius: 10px;
@@ -123,33 +116,19 @@
             margin-bottom: 2rem;
         }
 
-        .review h4 {
+        .review-card h4 {
             color: #f39c12;
             margin-bottom: 0.5rem;
         }
 
-        .review-stars {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .review-stars span {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #f39c12;
-            margin-right: 3px;
-        }
-
-        .review-stars span.empty {
-            background-color: #333;
+        .review-stars .fa {
+            color: #f39c12;
         }
 
         .review-date {
             color: #b0b0b0;
             font-size: 0.9rem;
+            margin-top: 0.5rem;
         }
 
         footer {
@@ -175,7 +154,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="scuole.html">Scuole</a>
@@ -191,7 +170,7 @@
     <div class="container mt-5">
         <div class="school-header">
             <h1>Liceo Statale "Giuseppina Turrisi Colonna"</h1>
-            <img src="images/turrisicolonna.jpeg" class="img-fluid rounded mx-auto d-block" alt="Scuola 1">
+            <img src="images/turrisicolonna.jpeg" class="img-fluid rounded mx-auto d-block" alt="Liceo Statale Giuseppina Turrisi Colonna">
         </div>
 
         <div class="school-description">
@@ -201,6 +180,7 @@
                 
                 Questi valori sono alla base della relazione fra docenti e studenti, della vita in comune, delle relazioni di cooperazione e delle regole condivise all’interno del nostro Istituto."</p>
         </div>
+
         <div class="school-info">
             <h3>Informazioni Generali</h3>
             <table>
@@ -233,38 +213,30 @@
 
         <div class="school-reviews">
             <h3>Recensioni</h3>
-            <div class="review">
+            <p>Ancora nessuna recensione</p>
+            <!-- Recensioni -->
+           <div class="review-card">
                 <h4>(⁠◠⁠‿⁠◕⁠)</h4>
                 <div class="review-stars">
-                    <span class="filled"></span>
-                    <span class="filled"></span>
-                    <span class="filled"></span>
-                    <span class="filled"></span>
-                    <span class="filled"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
                 </div>
                 <p>Una scuola dove mi sono trovato bene sin dal primo giorno, mi reputo fortunato ad averla scelta.</p>
                 <p class="review-date">11 Settembre 2024</p>
             </div>
-            <!-- <div class="review">
-                <h4>Anonimo</h4>
-                <div class="review-stars">
-                    <span class="filled"></span>
-                    <span class="filled"></span>
-                    <span class="filled"></span>
-                    <span class="empty"></span>
-                    <span class="empty"></span>
-                </div>
-                <p>La scuola di se è molto originale e la sua struttura (anche se ricorda quella di un carcere) è molto solida ed efficiente, ho dato 3 perché anche se ha i suoi pregi possiede anche dei difetti come:puzza di spinello, porte della toilette maschile mancanti e sopratutto staff (studenti) un po malavitoso.</p>
-                <p class="review-date">19 Luglio 2024</p>
-            </div> -->
         </div>
 
         <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
     </div>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
+    <footer class="bg-dark text-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
