@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liceo Statale "Giuseppina Turrisi Colonna" - KnowYourSchool</title>
+    <title>Istituto Istruzione Superiore Statale "G.B. Vaccarini" - KnowYourSchool</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -169,8 +169,8 @@
     <!-- Main Content -->
     <div class="container mt-5">
         <div class="school-header">
-            <h1>Liceo Statale "Giuseppina Turrisi Colonna"</h1>
-            <img src="images/turrisicolonna.jpeg" class="img-fluid rounded mx-auto d-block" alt="Liceo Statale Giuseppina Turrisi Colonna">
+            <h1>Istituto Istruzione Superiore Statale "G.B. Vaccarini"</h1>
+            <img src="images/vaccarini.jpg" class="img-fluid rounded mx-auto d-block" alt="Istituto Istruzione Superiore Statale G.B. Vaccarini">
         </div>
 
         <div class="school-description">
@@ -186,19 +186,19 @@
             <table>
                 <tr>
                     <th>Indirizzi Offerti</th>
-                    <td>Liceo Linguistico, Liceo delle Scienze Umane, Liceo delle Scienze Umane opz. Economico Sociale, Liceo Musicale Coreutico sez. Musicale, Liceo Musicale Coreutico sez. Coreutica</td>
+                    <td>Liceo Scientifico delle Scienze Applicate; Liceo Scientifico Sportivo; Costruzione, ambiente e territorio; Grafica e comunicazione; Informatica e telecomunicazioni</td>
                 </tr>
                 <tr>
                     <th>Numero Alunni</th>
-                    <td>1190</td>
+                    <td>738</td>
                 </tr>
                 <tr>
                     <th>Numero Classi</th>
-                    <td>56</td>
+                    <td>36</td>
                 </tr>
                 <tr>
                     <th>Indirizzo</th>
-                    <td>Via Fabio Filzi, 24, 95124 Catania CT</td>
+                    <td>Via Orchidea, 9, 95123 Catania CT</td>
                 </tr>
                 <tr>
                     <th>Classificazione</th>
@@ -206,7 +206,7 @@
                 </tr>
                 <tr>
                     <th>Sito Web</th>
-                    <td><a href="https://www.turrisicolonna.edu.it/" style="color: #f39c12;">https://www.turrisicolonna.edu.it/</a></td>
+                    <td><a href="https://www.vaccarinict.edu.it/" style="color: #f39c12;">https://www.vaccarinict.edu.it/</a></td>
                 </tr>
             </table>
         </div>
@@ -214,9 +214,9 @@
         <div class="school-reviews">
             <h3>Recensioni</h3>
             <p>Ancora nessuna recensione</p>
-            <!-- Recensioni -->
-           <div class="review-card">
-                <h4>(⁠◠⁠‿⁠◕⁠)</h4>
+            <!-- Commentato per esempio -->
+            <!-- <div class="review-card">
+                <h4>Nome Utente</h4>
                 <div class="review-stars">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
@@ -224,9 +224,9 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                 </div>
-                <p>Una scuola dove mi sono trovato bene sin dal primo giorno, mi reputo fortunato ad averla scelta.</p>
-                <p class="review-date">11 Settembre 2024</p>
-            </div>
+                <p>bla bla bla</p>
+                <p class="review-date">10 Luglio 2024</p>
+            </div> -->
         </div>
 
         <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>

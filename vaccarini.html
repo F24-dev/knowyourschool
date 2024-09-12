@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Istituto Istruzione Superiore Statale "G.B. Vaccarini" - KnowYourSchool</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* Global Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background: #121212;
+            background-color: #121212;
             color: #e0e0e0;
             line-height: 1.6;
         }
@@ -64,13 +63,16 @@
             font-size: 2.5rem;
         }
 
-        .school-description {
-            margin-bottom: 2rem;
+        .school-header img {
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
         }
 
-        .school-description p {
+        .school-description {
+            text-align: center;
             color: #b0b0b0;
             font-size: 1.1rem;
+            margin-bottom: 2rem;
         }
 
         .school-info {
@@ -91,7 +93,8 @@
             border-collapse: collapse;
         }
 
-        .school-info table th, .school-info table td {
+        .school-info table th,
+        .school-info table td {
             padding: 1rem;
             border: 1px solid #333;
             text-align: left;
@@ -107,7 +110,11 @@
             color: #b0b0b0;
         }
 
-        .review-card {
+        .school-reviews {
+            margin-bottom: 2rem;
+        }
+
+        .review {
             background-color: #1e1e1e;
             border: 1px solid #333;
             border-radius: 10px;
@@ -116,19 +123,33 @@
             margin-bottom: 2rem;
         }
 
-        .review-card h4 {
+        .review h4 {
             color: #f39c12;
             margin-bottom: 0.5rem;
         }
 
-        .review-stars .fa {
-            color: #f39c12;
+        .review-stars {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-stars span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #f39c12;
+            margin-right: 3px;
+        }
+
+        .review-stars span.empty {
+            background-color: #333;
         }
 
         .review-date {
             color: #b0b0b0;
             font-size: 0.9rem;
-            margin-top: 0.5rem;
         }
 
         footer {
@@ -154,7 +175,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="scuole.html">Scuole</a>
@@ -169,8 +190,8 @@
     <!-- Main Content -->
     <div class="container mt-5">
         <div class="school-header">
-            <h1>Istituto Istruzione Superiore Statale "G.B. Vaccarini"</h1>
-            <img src="images/vaccarini.jpg" class="img-fluid rounded mx-auto d-block" alt="Istituto Istruzione Superiore Statale G.B. Vaccarini">
+            <h1>Istituto Istruzione Superiore Statale "G.B. Vaccarini" - KnowYourSchool</h1>
+            <img src="images/ducadegliabruzzi.jpg" class="img-fluid rounded mx-auto d-block" alt="Scuola 1">
         </div>
 
         <div class="school-description">
@@ -210,22 +231,31 @@
                 </tr>
             </table>
         </div>
-
         <div class="school-reviews">
             <h3>Recensioni</h3>
-            <p>Ancora nessuna recensione</p>
-            <!-- Commentato per esempio -->
-            <!-- <div class="review-card">
-                <h4>Nome Utente</h4>
+            <div class="review">
+                <h4>Anonimo</h4>
                 <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="empty"></span>
                 </div>
-                <p>bla bla bla</p>
-                <p class="review-date">10 Luglio 2024</p>
+                <p>Allora, è una scuola carina, mi trovo bene, mi piace, ho ottimi compagni, chiaramente cambia da classe a classe, ma molti sono i professori buoni, che sanno insegnare e che non odiano il proprio lavoro. Purtroppo ci sono sempre quei 3-4 professori che odiano insegnare e sono lì solo per lo stipendio, ma per il resto va tutto bene, tranne per alcuni particolari, come il fatto che un pacchetto di cracker sia più resistente di certe aule.</p>
+                <p class="review-date">12 Settembre 2024</p>
+            </div>
+            <!-- <div class="review">
+                <h4>Anonimo</h4>
+                <div class="review-stars">
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="filled"></span>
+                    <span class="empty"></span>
+                    <span class="empty"></span>
+                </div>
+                <p>La scuola di se è molto originale e la sua struttura (anche se ricorda quella di un carcere) è molto solida ed efficiente, ho dato 3 perché anche se ha i suoi pregi possiede anche dei difetti come:puzza di spinello, porte della toilette maschile mancanti e sopratutto staff (studenti) un po malavitoso.</p>
+                <p class="review-date">19 Luglio 2024</p>
             </div> -->
         </div>
 
@@ -233,10 +263,8 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light text-center text-lg-start mt-5">
-        <div class="container p-4">
-            <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
