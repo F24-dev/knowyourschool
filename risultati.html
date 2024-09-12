@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risultati della Ricerca - KnowYourSchool</title>
+    <style>
+        /* Importazione di Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+        /* Stili globali */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #1c1c1c;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        nav.scrolled {
+            background-color: #000;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            margin: 0 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .search-bar form {
+            display: inline-flex;
+            align-items: center;
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .search-bar input[type="text"] {
+            border: none;
+            padding: 0.75rem;
+            font-size: 1rem;
+            color: #e0e0e0;
+            background-color: #333;
+            width: 300px;
+        }
+
+        .search-bar button {
+            border: none;
+            background-color: #f39c12;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .search-bar button:hover {
+            background-color: #e67e22;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .results {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .result-card {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+            text-align: center;
+            color: #e0e0e0;
+            text-decoration: none; /* Rimuove la sottolineatura del link */
+        }
+
+        .result-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+        }
+
+        .result-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .result-card img:hover {
+            opacity: 0.9;
+        }
+
+        .result-card h3 {
+            font-size: 1.6rem;
+            margin: 1rem;
+        }
+
+        .result-card p {
+            margin: 0 1rem 1rem;
+            color: #b0b0b0;
+        }
+
+        .no-results {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #e67e22;
+            margin: 2rem 0;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <a href="index.html">KnowYourSchool</a>
+        </div>
+    </nav>
+
+    <!-- Barra di ricerca -->
+    <div class="search-bar">
+        <form id="searchForm" action="risultati.html" method="GET">
+            <input type="text" name="query" placeholder="Cerca..." required>
+            <button type="submit">🔍</button>
+        </form>
+    </div>
+
+    <!-- Sezione dei risultati della ricerca -->
+    <section class="container">
+        <h1>Risultati della Ricerca</h1>
+        <div id="searchResults" class="results"></div>
+        <div id="noResults" class="no-results" style="display: none;">
+            Nessun risultato trovato per la tua ricerca. Prova con un'altra query.
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
+        <p>Seguici su <a href="https://www.instagram.com/knowyourschool_official/" target="_blank">Instagram</a>.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/knowyourschool_official/" target="_blank">📷</a>
+            <!-- Aggiungi altri social media icons se necessario -->
+        </div>
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+
+    if (query) {
+        document.querySelector('h1').innerHTML = `Risultati per: <span id="searchQuery">${query}</span>`;
+
+        // Elenco delle scuole
+        const results = [
+            { name: 'Principe Umberto', link: 'principeumberto.html', img: 'images/principeumberto.jpg' },
+            { name: 'Boggio Lera', link: 'boggio.html', img: 'images/boggiolera.jpg' },
+            { name: 'Galileo Galilei', link: 'galileo.html', img: 'images/galileogalilei.jpg' },
+            { name: 'Vaccarini', link: 'vaccarini.html', img: 'images/vaccarini.jpg' },
+            { name: 'Archimede', link: 'archimede.html', img: 'images/archimede.jpg' },
+            { name: 'Marconi', link: 'marconi.html', img: 'images/marconi.jpg' },
+            { name: 'Duca degli Abruzzi', link: 'duca.html', img: 'images/ducadegliabruzzi.jpg' },
+            { name: 'Ferrarin', link: 'ferrarin.html', img: 'images/ferrarin.jpg' },
+            { name: 'Turrisi Colonna', link: 'turrisi.html', img: 'images/turrisicolonna.jpeg' },
+            { name: 'Lombardo Radice', link: 'lombardo.html', img: 'images/lombardoradice.jpg' },
+            { name: 'Enrico Fermi', link: 'fermi.html', img: 'images/enricofermi.jpg' },
+            { name: 'Polivalente', link: 'polivalente.html', img: 'images/polivalente.png' },
+            { name: 'Eris', link: 'eris.html', img: 'images/eris.jpg' },
+            { name: 'Don Bosco', link: 'salesiani.html', img: 'images/salesiani.jpg' },
+            { name: 'Karol Wojitila', link: 'karol.html', img: 'images/karol.jpg' },
+            { name: 'Spedalieri', link: 'speda.html', img: 'images/spedalieri.jpg' },
+            { name: 'Mario Cutelli', link: 'mcutelli.html', img: 'images/mariocutelli.jpg' },
+            { name: 'Convitto Cutelli', link: 'cutelli.html', img: 'images/convittocutelli.jpeg' },
+            { name: 'Lazzaro', link: 'lazzaro.html', img: 'images/lazzaro.jpg' },
+            { name: 'Gemellaro', link: 'gemellaro.html', img: 'images/gemellaro.jpg' },
+            { name: 'De Felice Olivetti', link: 'defelice.html', img: 'images/defelice.jpg' },
+            { name: 'Emilio Greco', link: 'emilio.html', img: 'images/emiliogreco.jpg' }
+        ];
+
+        const resultsContainer = document.getElementById('searchResults');
+        const noResultsContainer = document.getElementById('noResults');
+
+        // Filtraggio dei risultati basato sulla query
+        const filteredResults = results.filter(result => result.name.toLowerCase().includes(query.toLowerCase()));
+
+        if (filteredResults.length > 0) {
+            resultsContainer.innerHTML = filteredResults
+                .map(result => `
+                    <a href="${result.link}" class="result-card">
+                        <img src="${result.img}" alt="${result.name}">
+                        <h3>${result.name}</h3>
+                    </a>
+                `)
+                .join('');
+            noResultsContainer.style.display = 'none';
+        } else {
+            resultsContainer.innerHTML = '';
+            noResultsContainer.style.display = 'block';
+        }
+    }
+});
+
+    </script>
+</body>
+</html>

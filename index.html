@@ -97,6 +97,37 @@
             transform: scale(1.05);
         }
 
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .search-bar input[type="text"] {
+            border: none;
+            padding: 0.5rem;
+            outline: none;
+            background: #1c1c1c;
+            color: #e0e0e0;
+            font-size: 1rem;
+        }
+
+        .search-bar button {
+            border: none;
+            background-color: #f39c12;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+            border-left: 1px solid #e0e0e0;
+        }
+
+        .search-bar button:hover {
+            background-color: #e67e22;
+        }
+
         @media (max-width: 768px) {
             .navbar-toggle {
                 display: block;
@@ -384,6 +415,15 @@
             <div class="navbar-menu">
                 <a href="index.html">Home</a>
                 <a href="scuole.html">Scuole</a>
+                <!-- Barra di ricerca -->
+                <!-- Barra di ricerca -->
+<div class="search-bar">
+    <form id="searchForm" action="risultati.html" method="GET">
+        <input type="text" name="query" placeholder="Cerca Scuola...">
+        <button type="submit">🔍</button>
+    </form>
+</div>
+
             </div>
         </div>
     </nav>
