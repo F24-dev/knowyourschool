@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liceo Classico Statale "Nicola Spedalieri" - KnowYourSchool</title>
+
+    <!-- Importing Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -52,24 +53,17 @@
             background-color: #e67e22;
         }
 
-        .school-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
         .school-header h1 {
             color: #e0e0e0;
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
-        }
-
-        .school-description {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
 
         .school-description p {
             color: #b0b0b0;
             font-size: 1.1rem;
+            margin-bottom: 2rem;
         }
 
         .school-info {
@@ -140,9 +134,25 @@
         footer p {
             margin-bottom: 0;
         }
+        .review-stars {
+    display: flex;
+    align-items: center;
+}
+
+.review-stars .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f39c12;
+    margin-right: 3px;
+}
+
+.review-stars .dot.empty {
+    background-color: #333;
+}
+
     </style>
 </head>
-
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -167,12 +177,12 @@
 
     <!-- Main Content -->
     <div class="container mt-5">
-        <div class="school-header">
+        <div class="school-header text-center">
             <h1>Liceo Classico Statale "Nicola Spedalieri"</h1>
-            <img src="images/spedalieri.jpg" class="img-fluid rounded mx-auto d-block" alt="Liceo Classico Statale Nicola Spedalieri">
+            <img src="images/spedalieri.jpg" class="img-fluid rounded mx-auto d-block" alt="Scuola Boggio Lera">
         </div>
 
-        <div class="school-description">
+        <div class="school-description text-center">
             <p>Il Liceo Ginnasio “Nicola Spedalieri” venne ufficialmente inaugurato il 19 dicembre 1861, sebbene la scuola fosse stata formalmente istituita, con apposito Decreto Prodittatoriale, già il 17 ottobre del 1860. Lo Spedalieri è il più antico Liceo Classico Statale della città di Catania. Nelle sue aule ha ospitato insegnanti di straordinario spessore culturale ed educativo, tra cui il poeta Mario Rapisardi, allievi illustri come il latinista Concetto Marchesi, i fisici Orso Mario Corbino ed Ettore Maiorana, lo scrittore Vitaliano Brancati, e generazioni di giovani che hanno saputo guadagnarsi la stima e l’apprezzamento unanimi con i loro successi affermandosi in campo umano, culturale e professionale. Il clima educativo, cordiale e fortemente inclusivo, e un autentico senso di appartenenza sono i fattori che da sempre caratterizzano l’attività di questa istituzione scolastica e ne costituiscono tuttora un elemento determinante. Il Liceo Spedalieri, pur conservando la qualità del proprio approccio alle discipline tradizionali, intende proporre un’offerta formativa aperta alle innovazioni, sensibile alle problematiche adolescenziali e in linea con le attuali tendenze educative e le esigenze degli studenti</p>
         </div>
 
@@ -208,35 +218,47 @@
 
         <div class="school-reviews">
             <h3>Recensioni</h3>
-            <p>Ancora nessuna recensione</p>
-            <!-- Commentato per esempio -->
-            <!-- <div class="review">
-                <h4>Nome Utente</h4>
+            <div class="review">
+                <h4>Anonimo</h4>
                 <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+                    <div class="dot"></div>
+                    <div class="dot "></div>
+                    <div class="dot "></div>
+                    <div class="dot "></div>
+                    <div class="dot "></div>
+                    
                 </div>
-                <p>bla bla bla</p>
-                <p class="review-date">10 Luglio 2024</p>
-            </div> -->
+                <p>lo amo ma mi mancano i 2005</p>
+                <p class="review-date">24 Settembre 2024</p>
+            </div>
+            
+            <div class="review">
+                <h4>Skibidi</h4>
+                <div class="review-stars">
+                    <div class="dot"></div>
+                    <div class="dot "></div>
+                    <div class="dot "></div>
+                    <div class="dot "></div>
+                    <div class="dot empty "></div>
+                    
+                </div>
+                <p>SkibidiSkibidiSkibidiSkibidiSkibidiSkibidiSkibidiSkibidiSkibidiSkibidiSkibidi</p>
+                <p class="review-date">24 Settembre 2024</p>
+            </div>
+            
         </div>
 
         <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-center text-light mt-5">
-        <div class="container p-4">
-            <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

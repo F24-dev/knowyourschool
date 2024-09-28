@@ -4,22 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Istituto Istruzione Superiore Statale "G.B. Vaccarini" - KnowYourSchool</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;700&display=swap">
+    <title>Liceo Ginnasio Statale "Mario Cutelli" - KnowYourSchool</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* Global Styles */
         body {
             font-family: 'Poppins', sans-serif;
-            background: #121212;
+            background-color: #121212;
             color: #e0e0e0;
             line-height: 1.6;
         }
 
         .navbar {
             background-color: #1c1c1c;
-            padding: 1rem;
         }
 
         .navbar-brand {
@@ -58,19 +55,18 @@
             margin-bottom: 2rem;
         }
 
-        .school-header h1 {
-            color: #e0e0e0;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
+        .school-header img {
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
         }
 
         .school-description {
             margin-bottom: 2rem;
+            color: #b0b0b0;
         }
 
         .school-description p {
-            color: #b0b0b0;
-            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
         .school-info {
@@ -91,7 +87,8 @@
             border-collapse: collapse;
         }
 
-        .school-info table th, .school-info table td {
+        .school-info table th,
+        .school-info table td {
             padding: 1rem;
             border: 1px solid #333;
             text-align: left;
@@ -107,7 +104,11 @@
             color: #b0b0b0;
         }
 
-        .review-card {
+        .school-reviews {
+            margin-bottom: 2rem;
+        }
+
+        .review {
             background-color: #1e1e1e;
             border: 1px solid #333;
             border-radius: 10px;
@@ -116,19 +117,12 @@
             margin-bottom: 2rem;
         }
 
-        .review-card h4 {
-            color: #f39c12;
-            margin-bottom: 0.5rem;
-        }
-
-        .review-stars .fa {
+        .review-stars {
             color: #f39c12;
         }
 
-        .review-date {
-            color: #b0b0b0;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
+        .btn-write-review {
+            margin-top: 1rem;
         }
 
         footer {
@@ -136,10 +130,6 @@
             color: #e0e0e0;
             padding: 1rem 0;
             text-align: center;
-        }
-
-        footer p {
-            margin-bottom: 0;
         }
     </style>
 </head>
@@ -154,7 +144,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="scuole.html">Scuole</a>
@@ -169,16 +159,12 @@
     <!-- Main Content -->
     <div class="container mt-5">
         <div class="school-header">
-            <h1>Istituto Istruzione Superiore Statale "G.B. Vaccarini"</h1>
-            <img src="images/vaccarini.jpg" class="img-fluid rounded mx-auto d-block" alt="Istituto Istruzione Superiore Statale G.B. Vaccarini">
+            <h1>Liceo Ginnasio Statale "Mario Cutelli"</h1>
+            <img src="images/mariocutelli.jpg" class="img-fluid rounded mx-auto d-block" alt="Liceo Ginnasio Statale Mario Cutelli">
         </div>
 
         <div class="school-description">
-            <p>"Il sistema educativo del nostro Istituto è organizzato in base ai principi della sussidiarietà e dell’autonomia.
-
-                La nostra scuola ha un’autonomia didattica, organizzativa, di ricerca e si basa su valori fondati nel rispetto, tolleranza, gentilezza, pace, solidarietà, libertà, giustizia e onestà.
-                
-                Questi valori sono alla base della relazione fra docenti e studenti, della vita in comune, delle relazioni di cooperazione e delle regole condivise all’interno del nostro Istituto."</p>
+            <p>Il Liceo Ginnasio Statale Mario Cutelli (dal 27 gennaio 2022 co-intitolato a Carmelo Salanitro) ha più di un secolo di storia: basti pensare che nel 2023 cade il 125° anniversario della fondazione, autorizzata con Regio Decreto. Esso rappresenta, nel panorama della formazione e della cultura di Catania, un’istituzione autorevole e prestigiosa, frequentata da diverse generazioni di giovani, molti dei quali hanno rivestito, e rivestono, ruoli importanti nella società.</p>
         </div>
 
         <div class="school-info">
@@ -186,19 +172,19 @@
             <table>
                 <tr>
                     <th>Indirizzi Offerti</th>
-                    <td>Liceo Scientifico delle Scienze Applicate; Liceo Scientifico Sportivo; Costruzione, ambiente e territorio; Grafica e comunicazione; Informatica e telecomunicazioni</td>
+                    <td>Liceo Classico</td>
                 </tr>
                 <tr>
                     <th>Numero Alunni</th>
-                    <td>738</td>
+                    <td>1075</td>
                 </tr>
                 <tr>
                     <th>Numero Classi</th>
-                    <td>36</td>
+                    <td>52</td>
                 </tr>
                 <tr>
                     <th>Indirizzo</th>
-                    <td>Via Orchidea, 9, 95123 Catania CT</td>
+                    <td>Via Firenze, 202, 95128 Catania CT</td>
                 </tr>
                 <tr>
                     <th>Classificazione</th>
@@ -206,7 +192,7 @@
                 </tr>
                 <tr>
                     <th>Sito Web</th>
-                    <td><a href="https://www.vaccarinict.edu.it/" style="color: #f39c12;">https://www.vaccarinict.edu.it/</a></td>
+                    <td><a href="https://www.liceocutelli.edu.it/" style="color: #f39c12;">https://www.liceocutelli.edu.it/</a></td>
                 </tr>
             </table>
         </div>
@@ -214,26 +200,12 @@
         <div class="school-reviews">
             <h3>Recensioni</h3>
             <p>Ancora nessuna recensione</p>
-            <!-- Commentato per esempio -->
-            <!-- <div class="review-card">
-                <h4>Nome Utente</h4>
-                <div class="review-stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div>
-                <p>bla bla bla</p>
-                <p class="review-date">10 Luglio 2024</p>
-            </div> -->
+            <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
         </div>
-
-        <a href="recensioni.html" class="btn btn-primary btn-write-review">Scrivi una recensione</a>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light text-center text-lg-start mt-5">
+    <footer class="bg-dark text-center text-lg-start mt-5">
         <div class="container p-4">
             <p class="text-center">&copy; 2024 KnowYourSchool. Realizzato da F24.</p>
         </div>
